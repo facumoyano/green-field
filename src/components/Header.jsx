@@ -6,17 +6,17 @@ import { ImArrowRight2 } from "react-icons/im";
 
 const Header = () => {
     return (
-        <div class="wrp">
-            <div class="portada"></div>
-            <div class="contenido">
-                <div class="info">
+        <div className="wrp">
+            <div className="portada"></div>
+            <div className="contenido">
+                <div className="info">
                     <Heading as="h1">Del mundo hacia el mundo.</Heading>
                     <Link to="contact">
                         Contáctanos <ImArrowRight2 />{" "}
                     </Link>
                 </div>
             </div>
-            <div class="curveado">
+            <div className="curveado">
                 <Image src={Svg} />
             </div>
         </div>

@@ -5,7 +5,14 @@ import LogoBlanco from "../assets/logo-blanco.png";
 
 const NavBar = () => {
     return (
-        <Box as="nav" bgColor="#102F1B">
+        <Box
+            as="nav"
+            bgColor="#102F1B"
+            width="100%"
+            position="fixed"
+            top="0"
+            zIndex="2"
+        >
             <Stack
                 flexDirection="row"
                 justifyContent="space-between"

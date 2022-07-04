@@ -1,5 +1,6 @@
 .wrp{
-    width: 100%; height: 600px;
+    width: 100%; height: 80vh;
+    margin-top: 100px;
     position: relative;
 }
 .portada{
@@ -59,4 +60,25 @@
     .contenido .info h1{
         font-size: 35px;
     }    
+}
+.waveContainer{
+    height: 100vh;
+    overflow: hidden;
+  }
+  .viewBox{
+    height: 100%;
+    width: 100%;
+  }
+  .path{
+    stroke: none;
+    fill: rgb(237, 115, 115);
+  }
+  .slick-dots li button {
+    color: #fff;
+    opacity: 1;
+    
+}
+.slick-dots li button::before {
+    color: #fff;
+    
 }
