@@ -1,9 +1,11 @@
 import React from "react";
-import { Box, Grid, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import Slider from "react-slick";
 import ServiceItem from "./ServiceItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import img1 from "../assets/ServiceItem.jpg";
+import img2 from "../assets/ServiceItem2.jpg";
 
 const Services = () => {
     const settings = {
@@ -17,7 +19,7 @@ const Services = () => {
         pauseOnHover: true,
     };
     return (
-        <Box backgroundColor="blanco" height="50vh">
+        <Box backgroundColor="blanco">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
                 <path
                     fill="#102F1B"
@@ -36,11 +38,28 @@ const Services = () => {
                     >
                         Servicios
                     </Heading>
-                    <Box maxWidth="900px" margin="0 auto">
+                    <Box maxWidth="900px" margin="0 auto" pb={40}>
                         <Slider {...settings}>
-                            <ServiceItem />
-                            <ServiceItem />
-                            <ServiceItem />
+                            <ServiceItem
+                                img={img1}
+                                titulo="Conectando negocios"
+                                texto=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam sodales accumsan leo, vitae gravida ante laoreet
+                        ac. Curabitur commodo facilisis felis eu luctus. Proin
+                        et efficitur augue. Sed non porttitor nibh, a ultricies
+                        diam. Aliquam commodo porta venenatis. Curabitur
+                        suscipit vulputate pretium."
+                            />
+                            <ServiceItem
+                                img={img2}
+                                titulo="Trader y broker"
+                                texto=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam sodales accumsan leo, vitae gravida ante laoreet
+                        ac. Curabitur commodo facilisis felis eu luctus. Proin
+                        et efficitur augue. Sed non porttitor nibh, a ultricies
+                        diam. Aliquam commodo porta venenatis. Curabitur
+                        suscipit vulputate pretium."
+                            />
                         </Slider>
                     </Box>
                 </Box>

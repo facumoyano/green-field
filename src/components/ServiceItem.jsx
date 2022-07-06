@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import img from "../assets/ServiceItem.jpg";
 
-const ServiceItem = () => {
+const ServiceItem = ({ img, titulo, texto }) => {
     return (
         <Box cursor="grab">
             <Grid templateColumns="1fr 1fr" gap={10}>
@@ -14,7 +14,7 @@ const ServiceItem = () => {
                     rounded="lg"
                 >
                     <Box
-                        background="rgba(16, 47, 27, 0.3)"
+                        background="rgba(16, 47, 27, 0.2)"
                         width="100%"
                         height="100%"
                         rounded="lg"
@@ -22,15 +22,16 @@ const ServiceItem = () => {
                 </Box>
                 <Box display="flex" flexDirection="column" gap={4}>
                     <Heading as="h3" color="blanco">
-                        Titulo
+                        {titulo}
                     </Heading>
                     <Text color="blanco">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Etiam sodales accumsan leo, vitae gravida ante laoreet
                         ac. Curabitur commodo facilisis felis eu luctus. Proin
                         et efficitur augue. Sed non porttitor nibh, a ultricies
                         diam. Aliquam commodo porta venenatis. Curabitur
-                        suscipit vulputate pretium.
+                        suscipit vulputate pretium. */}
+                        {texto}
                     </Text>
                 </Box>
             </Grid>

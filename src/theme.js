@@ -5,11 +5,12 @@ import "@fontsource/montserrat"
 const theme = extendTheme({
     colors: {
         verde: '#4ebd94',
-        amarillo: '#fcc80d',
+        amarillo: '#F0D274',
         azul: '#002b43',
         blanco: '#fff',
         negro: '#000',
         principal: '#102F1B',
+        amarilloFuerte: '#fcc80d'
     },
     fonts: {
         heading: `'Varela Round', sans-serif`,

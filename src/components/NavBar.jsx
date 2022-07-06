@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <Box
             as="nav"
-            bgColor="#102F1B"
+            bgColor="principal"
             width="100%"
             position="fixed"
             top="0"

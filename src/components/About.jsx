@@ -20,7 +20,7 @@ const About = () => {
                     </Box>
                     <Stack flexDirection="column" fontWeight="bold" gap={4}>
                         <Heading
-                            as="h4"
+                            as="h3"
                             color="principal"
                             textAlign="center"
                             textDecoration="underline"
