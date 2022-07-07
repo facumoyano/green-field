@@ -18,9 +18,9 @@ const Products = () => {
                 <article className="card card--1">
                     <div className="card__info-hover"></div>
                     <div className="card__img"></div>
-                    <a href="#" className="card_link">
-                        <div class="card__img--hover"></div>
-                    </a>
+
+                    <div class="card__img--hover"></div>
+
                     <div className="card__info">
                         <Heading
                             fontSize="lg"
@@ -41,9 +41,9 @@ const Products = () => {
                         <div className="card__clock-info"></div>
                     </div>
                     <div className="card__img"></div>
-                    <a href="#" className="card_link">
-                        <div className="card__img--hover"></div>
-                    </a>
+
+                    <div className="card__img--hover"></div>
+
                     <div className="card__info">
                         <Heading
                             fontSize="lg"
@@ -64,9 +64,9 @@ const Products = () => {
                         <div className="card__clock-info"></div>
                     </div>
                     <div className="card__img"></div>
-                    <a href="#" className="card_link">
-                        <div className="card__img--hover"></div>
-                    </a>
+
+                    <div className="card__img--hover"></div>
+
                     <div className="card__info">
                         <Heading
                             fontSize="lg"
@@ -83,9 +83,9 @@ const Products = () => {
                         <div className="card__clock-info"></div>
                     </div>
                     <div className="card__img"></div>
-                    <a href="#" className="card_link">
-                        <div className="card__img--hover"></div>
-                    </a>
+
+                    <div className="card__img--hover"></div>
+
                     <div className="card__info">
                         <Heading
                             fontSize="lg"

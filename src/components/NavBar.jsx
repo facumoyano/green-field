@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Stack, Heading, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import LogoBlanco from "../assets/logo-blanco.png";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
     return (
@@ -12,23 +13,31 @@ const NavBar = () => {
             position="fixed"
             top="0"
             zIndex="2"
+            boxShadow="xl"
         >
             <Stack
                 flexDirection="row"
-                justifyContent="space-between"
+                justifyContent={{ base: "center", md: "space-between" }}
                 color="blanco"
                 maxWidth="1200px"
                 alignItems="center"
                 margin="0 auto"
                 py={5}
             >
-                <Image
-                    src={LogoBlanco}
-                    alt="Logo Green Field Brokers"
-                    width="80px"
-                    objectFit="cover"
-                />
-                <Stack flexDirection="row" gap={4} alignItems="center">
+                <Link to="/">
+                    <Image
+                        src={LogoBlanco}
+                        alt="Logo Green Field Brokers"
+                        width={{ base: "100px", md: "80px" }}
+                        objectFit="cover"
+                    />
+                </Link>
+                <Stack
+                    flexDirection="row"
+                    gap={4}
+                    alignItems="center"
+                    display={{ base: "none", md: "flex" }}
+                >
                     <Heading
                         as="span"
                         fontSize="large"
@@ -40,7 +49,7 @@ const NavBar = () => {
                             transition: ".3s",
                         }}
                     >
-                        <Link to="">Inicio</Link>
+                        <Link to="/">Inicio</Link>
                     </Heading>
                     <Heading
                         as="span"
@@ -52,9 +61,9 @@ const NavBar = () => {
                             transition: ".3s",
                         }}
                     >
-                        <Link className="link" to="">
+                        <HashLink className="link" to="#about" smooth>
                             Nosotros
-                        </Link>
+                        </HashLink>
                     </Heading>
                     <Heading
                         as="span"
@@ -66,7 +75,9 @@ const NavBar = () => {
                             transition: ".3s",
                         }}
                     >
-                        <Link to="">Servicios</Link>
+                        <HashLink to="#services" smooth>
+                            Servicios
+                        </HashLink>
                     </Heading>
                     <Heading
                         as="span"
@@ -78,7 +89,9 @@ const NavBar = () => {
                             transition: ".3s",
                         }}
                     >
-                        <Link to="">Productos</Link>
+                        <HashLink to="#products" smooth>
+                            Productos
+                        </HashLink>
                     </Heading>
                     <Heading
                         as="span"
@@ -90,7 +103,7 @@ const NavBar = () => {
                             transition: ".3s",
                         }}
                     >
-                        <Link to="">Contacto</Link>
+                        <Link to="/contact">Contacto</Link>
                     </Heading>
                 </Stack>
             </Stack>

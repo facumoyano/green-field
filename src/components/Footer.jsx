@@ -11,7 +11,8 @@ const Footer = () => {
             <Stack
                 maxWidth="1200px"
                 margin="0 auto"
-                flexDirection="row"
+                flexDirection={{ base: "column", md: "row" }}
+                gap={14}
                 justifyContent="space-between"
                 alignItems="center"
                 py={10}
@@ -48,7 +49,12 @@ const Footer = () => {
                     </List>
                 </Stack>
             </Stack>
-            <Box textAlign="center" pb={4}>
+            <Box
+                textAlign="center"
+                pb={4}
+                pt={{ base: 4, md: 0 }}
+                px={{ base: 3, md: 0 }}
+            >
                 <Text>
                     Todos los derechos reservados © Green Field Broker LLC
                 </Text>

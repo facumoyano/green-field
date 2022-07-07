@@ -4,11 +4,15 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 const ContactHeader = () => {
     return (
         <Box
-            background="linear-gradient(302deg, rgba(16,47,27,1) 0%, rgba(64,156,97,1) 100%, rgba(255,255,255,1) 100%)"
+            background="linear-gradient(180deg, rgba(0,43,67,1) 0%, rgba(18,115,170,1) 100%, rgba(255,255,255,1) 100%)"
             mt="100px"
         >
             <Box color="blanco" textAlign="center" pt={10}>
-                <Heading fontSize="6xl" as="h2" fontWeight="400">
+                <Heading
+                    fontSize={{ base: "5xl", md: "6xl" }}
+                    as="h2"
+                    fontWeight="400"
+                >
                     Contáctanos
                 </Heading>
                 <Text fontSize="xl" mt={3}>

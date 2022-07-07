@@ -16,7 +16,7 @@ const Header = () => {
                     </Link>
                 </div>
             </div>
-            <div className="curveado">
+            <div className="curveado" id="about">
                 <Image src={Svg} />
             </div>
         </div>

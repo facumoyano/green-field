@@ -9,7 +9,7 @@ const theme = extendTheme({
         azul: '#002b43',
         blanco: '#fff',
         negro: '#000',
-        principal: '#102F1B',
+        principal: '#002b43',
         amarilloFuerte: '#fcc80d'
     },
     fonts: {

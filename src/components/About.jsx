@@ -7,9 +7,10 @@ const About = () => {
         <Box mt={10}>
             <Box maxWidth="1200px" margin="0 auto">
                 <Grid
-                    templateColumns="1fr 1fr"
+                    templateColumns={{ base: "1fr", md: "1fr 1fr" }}
                     gap={10}
                     justifyContent="center"
+                    px={8}
                 >
                     <Box>
                         <video muted loop autoPlay width="100%" height="100%">
