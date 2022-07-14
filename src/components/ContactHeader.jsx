@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const ContactHeader = () => {
     return (
@@ -8,16 +9,23 @@ const ContactHeader = () => {
             mt="100px"
         >
             <Box color="blanco" textAlign="center" pt={10}>
-                <Heading
-                    fontSize={{ base: "5xl", md: "6xl" }}
-                    as="h2"
-                    fontWeight="400"
+                <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    transition={{ duration: 1 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    translate={{ x: 100 }}
                 >
-                    Contáctanos
-                </Heading>
-                <Text fontSize="xl" mt={3}>
-                    Nos comunicaremos lo más pronto posible.
-                </Text>
+                    <Heading
+                        fontSize={{ base: "5xl", md: "6xl" }}
+                        as="h2"
+                        fontWeight="400"
+                    >
+                        Contáctanos
+                    </Heading>
+                    <Text fontSize="xl" mt={3}>
+                        Nos comunicaremos lo más pronto posible.
+                    </Text>
+                </motion.div>
             </Box>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path

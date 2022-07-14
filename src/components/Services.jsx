@@ -4,8 +4,9 @@ import Slider from "react-slick";
 import ServiceItem from "./ServiceItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../assets/ServiceItem.jpg";
-import img2 from "../assets/ServiceItem2.jpg";
+import img1 from "../assets/ServiceItem.webp";
+import img2 from "../assets/ServiceItem2.webp";
+import { motion } from "framer-motion";
 
 const Services = () => {
     const settings = {
@@ -20,7 +21,11 @@ const Services = () => {
     };
     return (
         <Box backgroundColor="blanco" id="services">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 300"
+                style={{ margin: "-10px" }}
+            >
                 <path
                     fill="#002b43"
                     fillOpacity="1"
@@ -29,44 +34,39 @@ const Services = () => {
             </svg>
             <Box backgroundColor="principal" height="100%">
                 <Box maxWidth="1200px" margin="0 auto">
-                    <Heading
-                        as="h3"
-                        color="blanco"
-                        textAlign="center"
-                        textDecoration="underline"
-                        mb={14}
+                    <motion.div
+                        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                        transition={{ duration: 0.5 }}
                     >
-                        Servicios
-                    </Heading>
-                    <Box
-                        maxWidth="900px"
-                        margin="0 auto"
-                        pb={40}
-                        px={{ base: 8, md: 0 }}
-                    >
-                        <Slider {...settings}>
-                            <ServiceItem
-                                img={img1}
-                                titulo="Conectando negocios"
-                                texto=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam sodales accumsan leo, vitae gravida ante laoreet
-                        ac. Curabitur commodo facilisis felis eu luctus. Proin
-                        et efficitur augue. Sed non porttitor nibh, a ultricies
-                        diam. Aliquam commodo porta venenatis. Curabitur
-                        suscipit vulputate pretium."
-                            />
-                            <ServiceItem
-                                img={img2}
-                                titulo="Trader y broker"
-                                texto=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam sodales accumsan leo, vitae gravida ante laoreet
-                        ac. Curabitur commodo facilisis felis eu luctus. Proin
-                        et efficitur augue. Sed non porttitor nibh, a ultricies
-                        diam. Aliquam commodo porta venenatis. Curabitur
-                        suscipit vulputate pretium."
-                            />
-                        </Slider>
-                    </Box>
+                        <Heading
+                            as="h3"
+                            color="blanco"
+                            textAlign="center"
+                            textDecoration="underline"
+                            py={14}
+                        >
+                            Servicios
+                        </Heading>
+                        <Box
+                            maxWidth="900px"
+                            margin="0 auto"
+                            pb={40}
+                            px={{ base: 8, md: 0 }}
+                        >
+                            <Slider {...settings}>
+                                <ServiceItem
+                                    img={img1}
+                                    titulo="Conectando negocios"
+                                    texto="Comercio internacional de productos agroalimentarios con sede en Estados unidos de América conectando al mundo. Construimos relaciones sólidas y sustentables en el tiempo con nuestra red de clientes. Hacemos posible el desarrollo de internacionalización. "
+                                />
+                                <ServiceItem
+                                    img={img2}
+                                    titulo="Trader y broker"
+                                    texto=" Ofrecemos un servicio ajustado a las necesidades de nuestros clientes, tanto del exportador como del importador entendiendo su proceso productivo y de compra o venta."
+                                />
+                            </Slider>
+                        </Box>
+                    </motion.div>
                 </Box>
             </Box>
         </Box>

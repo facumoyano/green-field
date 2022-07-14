@@ -10,7 +10,8 @@ const theme = extendTheme({
         blanco: '#fff',
         negro: '#000',
         principal: '#002b43',
-        amarilloFuerte: '#fcc80d'
+        amarilloFuerte: '#fcc80d',
+        error: '#9B2C2C'
     },
     fonts: {
         heading: `'Varela Round', sans-serif`,

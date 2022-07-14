@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, Grid, Heading, Text } from "@chakra-ui/react";
-import img from "../assets/ServiceItem.jpg";
 
 const ServiceItem = ({ img, titulo, texto }) => {
     return (
-        <Box cursor="grab">
+        <Box cursor="grab" my={10}>
             <Grid
                 templateColumns={{ base: "1fr", md: "1fr 1fr" }}
                 templateRows={{ base: "1fr 1fr", md: "1fr" }}
@@ -17,6 +16,7 @@ const ServiceItem = ({ img, titulo, texto }) => {
                     backgroundPosition="center"
                     backgroundSize="cover"
                     rounded="lg"
+                    height="100%"
                 >
                     <Box
                         background="rgba(0, 43, 67, 0.2)"
@@ -29,13 +29,12 @@ const ServiceItem = ({ img, titulo, texto }) => {
                     <Heading as="h3" color="blanco">
                         {titulo}
                     </Heading>
-                    <Text color="blanco">
-                        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam sodales accumsan leo, vitae gravida ante laoreet
-                        ac. Curabitur commodo facilisis felis eu luctus. Proin
-                        et efficitur augue. Sed non porttitor nibh, a ultricies
-                        diam. Aliquam commodo porta venenatis. Curabitur
-                        suscipit vulputate pretium. */}
+                    <Text
+                        color="blanco"
+                        fontSize="lg"
+                        lineHeight="1.8rem"
+                        fontStyle="italic"
+                    >
                         {texto}
                     </Text>
                     <Box id="products"></Box>

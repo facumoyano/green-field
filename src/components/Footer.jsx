@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Stack, ListItem, List, Image, Text } from "@chakra-ui/react";
-import logo from "../assets/logo-blanco.png";
+import logo from "../assets/logo-blanco.webp";
 import { MdEmail } from "react-icons/md";
 import { BiMap } from "react-icons/bi";
 import { BsFillTelephoneFill } from "react-icons/bs";

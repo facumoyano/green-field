@@ -2,11 +2,16 @@ import React from "react";
 import { Box, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { ImArrowRight2 } from "react-icons/im";
+import { motion } from "framer-motion";
 
 const ContactHome = () => {
     return (
         <Box backgroundColor="blanco">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+                style={{ margin: "-10px" }}
+            >
                 <path
                     fill="#002b43"
                     fillOpacity="1"
@@ -19,20 +24,25 @@ const ContactHome = () => {
                 height="30vh"
                 pt={{ base: 16, md: 0 }}
             >
-                <Button
-                    rightIcon={<ImArrowRight2 />}
-                    backgroundColor="amarilloFuerte"
-                    color="blanco"
-                    fontSize="2xl"
-                    borderRadius="30px"
-                    py={6}
-                    px={10}
-                    _hover={{
-                        bgColor: "amarillo",
-                    }}
+                <motion.div
+                    whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                    transition={{ duration: 0.5 }}
                 >
-                    <Link to="/contact">Contáctanos</Link>
-                </Button>
+                    <Button
+                        rightIcon={<ImArrowRight2 />}
+                        backgroundColor="amarilloFuerte"
+                        color="blanco"
+                        fontSize="2xl"
+                        borderRadius="30px"
+                        py={6}
+                        px={10}
+                        _hover={{
+                            bgColor: "amarillo",
+                        }}
+                    >
+                        <Link to="/contact">Contáctanos</Link>
+                    </Button>
+                </motion.div>
             </Box>
         </Box>
     );

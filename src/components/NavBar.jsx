@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Stack, Heading, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import LogoBlanco from "../assets/logo-blanco.png";
+import LogoBlanco from "../assets/logo-blanco.webp";
 import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {

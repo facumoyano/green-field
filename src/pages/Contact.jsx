@@ -1,7 +1,8 @@
 import React from "react";
 import ContactHeader from "../components/ContactHeader";
 import Footer from "../components/Footer";
-import Form from "../components/Form";
+import FormContainer from "../components/FormContainer";
+
 import NavBar from "../components/NavBar";
 
 const Contact = () => {
@@ -9,7 +10,7 @@ const Contact = () => {
         <>
             <NavBar />
             <ContactHeader />
-            <Form />
+            <FormContainer />
             <Footer />
         </>
     );
