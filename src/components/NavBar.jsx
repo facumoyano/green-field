@@ -1,10 +1,26 @@
 import React from "react";
-import { Box, Stack, Heading, Image } from "@chakra-ui/react";
+import {
+    Box,
+    Stack,
+    Heading,
+    Image,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    MenuDivider,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import LogoBlanco from "../assets/logo-blanco.webp";
 import { HashLink } from "react-router-hash-link";
+import { TbLanguage } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
+import esp from "../assets/spain.png";
+import usa from "../assets/usa.png";
 
 const NavBar = () => {
+    const { t, i18n } = useTranslation();
+
     return (
         <Box
             as="nav"
@@ -44,25 +60,27 @@ const NavBar = () => {
                         fontWeight="400"
                         mt="0.5rem"
                         _hover={{
-                            borderBottom: "3px solid white",
+                            borderBottom: "3px solid #fcc80d",
                             paddingBottom: "10px",
-                            transition: ".3s",
+                            color: "amarilloFuerte",
+                            transition: ".2s",
                         }}
                     >
-                        <Link to="/">Inicio</Link>
+                        <Link to="/">{t("navbar.inicio")}</Link>
                     </Heading>
                     <Heading
                         as="span"
                         fontSize="large"
                         fontWeight="400"
                         _hover={{
-                            borderBottom: "3px solid white",
+                            borderBottom: "3px solid #fcc80d",
                             paddingBottom: "10px",
-                            transition: ".3s",
+                            color: "amarilloFuerte",
+                            transition: ".2s",
                         }}
                     >
                         <HashLink className="link" to="#about" smooth>
-                            Nosotros
+                            {t("navbar.empresa")}
                         </HashLink>
                     </Heading>
                     <Heading
@@ -70,13 +88,14 @@ const NavBar = () => {
                         fontSize="large"
                         fontWeight="400"
                         _hover={{
-                            borderBottom: "3px solid white",
+                            borderBottom: "3px solid #fcc80d",
                             paddingBottom: "10px",
-                            transition: ".3s",
+                            color: "amarilloFuerte",
+                            transition: ".2s",
                         }}
                     >
                         <HashLink to="#services" smooth>
-                            Servicios
+                            {t("navbar.servicios")}
                         </HashLink>
                     </Heading>
                     <Heading
@@ -84,13 +103,14 @@ const NavBar = () => {
                         fontSize="large"
                         fontWeight="400"
                         _hover={{
-                            borderBottom: "3px solid white",
+                            borderBottom: "3px solid #fcc80d",
                             paddingBottom: "10px",
-                            transition: ".3s",
+                            color: "amarilloFuerte",
+                            transition: ".2s",
                         }}
                     >
                         <HashLink to="#products" smooth>
-                            Productos
+                            {t("navbar.productos")}
                         </HashLink>
                     </Heading>
                     <Heading
@@ -98,13 +118,64 @@ const NavBar = () => {
                         fontSize="large"
                         fontWeight="400"
                         _hover={{
-                            borderBottom: "3px solid white",
+                            borderBottom: "3px solid #fcc80d",
                             paddingBottom: "10px",
-                            transition: ".3s",
+                            color: "amarilloFuerte",
+                            transition: ".2s",
                         }}
                     >
-                        <Link to="/contact">Contacto</Link>
+                        <Link to="/contact">{t("navbar.contacto")}</Link>
                     </Heading>
+                    <Menu>
+                        <MenuButton
+                            color="white"
+                            _hover={{
+                                borderBottom: "3px solid #fcc80d",
+                                paddingBottom: "10px",
+                                color: "#fcc80d",
+                                transition: ".2s",
+                            }}
+                        >
+                            <TbLanguage
+                                style={{ color: "white", fontSize: "20px" }}
+                            />
+                        </MenuButton>
+                        <MenuList color="principal">
+                            <MenuItem
+                                fontWeight={600}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    i18n.changeLanguage("es");
+                                }}
+                            >
+                                <Image
+                                    boxSize="1.5rem"
+                                    borderRadius="full"
+                                    src={esp}
+                                    alt="España"
+                                    mr="12px"
+                                />
+                                <span>ESP</span>
+                            </MenuItem>
+                            <MenuDivider />
+                            <MenuItem
+                                fontWeight={600}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    i18n.changeLanguage("en");
+                                }}
+                            >
+                                <Image
+                                    boxSize="1.5rem"
+                                    borderRadius="full"
+                                    src={usa}
+                                    alt="usa"
+                                    mr="12px"
+                                />
+                                <span>ENG</span>
+                            </MenuItem>
+                        </MenuList>
+                    </Menu>
                 </Stack>
             </Stack>
         </Box>

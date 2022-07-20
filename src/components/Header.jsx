@@ -13,13 +13,15 @@ const Header = () => {
                 <div className="info">
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
-                        transition={{ duration: 1 }}
+                        transition={{ delay: 0.5, duration: 0.6 }}
                         animate={{ scale: 1, opacity: 1 }}
                     >
                         <Heading as="h1">Del mundo hacia el mundo.</Heading>
-                        <Link to="contact">
-                            Contáctanos <ImArrowRight2 />{" "}
-                        </Link>
+                        <motion.div whileHover={{ scale: 1.1 }}>
+                            <Link to="contact">
+                                Contáctanos <ImArrowRight2 />{" "}
+                            </Link>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>

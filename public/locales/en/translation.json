@@ -1,0 +1,9 @@
+{
+    "navbar": {
+        "inicio": "Home",
+        "empresa": "About us",
+        "servicios": "Services",
+        "productos": "Products",
+        "contacto": "Contact"
+    }
+}

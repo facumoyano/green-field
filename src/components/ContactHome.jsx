@@ -26,7 +26,8 @@ const ContactHome = () => {
             >
                 <motion.div
                     whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.4 }}
+                    whileHover={{ scale: 1.1 }}
                 >
                     <Button
                         rightIcon={<ImArrowRight2 />}
