@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ContactHeader = () => {
+    const { t } = useTranslation();
     return (
         <Box
             background="linear-gradient(180deg, rgba(0,43,67,1) 0%, rgba(18,115,170,1) 100%, rgba(255,255,255,1) 100%)"
@@ -20,10 +22,10 @@ const ContactHeader = () => {
                         as="h2"
                         fontWeight="400"
                     >
-                        Contáctanos
+                        {t("header.btn")}
                     </Heading>
                     <Text fontSize="xl" mt={3}>
-                        Nos comunicaremos lo más pronto posible.
+                        {t("header.subtitle")}
                     </Text>
                 </motion.div>
             </Box>

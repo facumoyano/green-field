@@ -5,5 +5,44 @@
         "servicios": "Servicios",
         "productos": "Productos",
         "contacto": "Contacto"
+    },
+    "header": {
+        "title": "Del mundo hacia el mundo",
+        "btn": "Contáctanos",
+        "subtitle": "Nos comunicaremos lo mas pronto posible."
+    },
+    "about": {
+        "title": "Sobre nosotros",
+        "text1": "Somos una empresa especializada en comercio exterior que se destaca por su eficacia, operatividad, calidad y servicio. Green Field fue fundada con un entendimiento de la necesidad de conectar negocios a través de la comprensión de los productos e ingredientes agroalimentarios.",
+        "text2": "Trabajamos con estrictos controles en origen de nuestros clientes con un importante foco en calidad y cumplimiento de las especificaciones acordadas entre las partes.",
+        "text3": "Nuestro esfuerzo se focaliza en generar y mantener relaciones sólidas con nuestra red de clientes.",
+        "text4": "Nuestra experiencia en el mercado internacional de agro alimentos y logística nos permite poder acompañar el proceso de comercio exterior de manera transversal en lo que respecta a exportación e importación.",
+        "text5": "Hacemos que su experiencia en comercio exterior sea exitosa."
+    },
+    "services": {
+        "title": "Servicios",
+        "subtitle1": "Trader y broker",
+        "text1": "Ofrecemos un servicio ajustado a las necesidades de nuestros clientes, tanto del exportador como del importador entendiendo su proceso productivo y de compra o venta.",
+        "subtitle2": "Conectando negocios",
+        "text2": "Comercio internacional de productos agroalimentarios con sede en Estados unidos de América conectando al mundo. Construimos relaciones sólidas y sustentables en el tiempo con nuestra red de clientes. Hacemos posible el desarrollo de internacionalización."
+    },
+    "products": {
+        "title": "Productos",
+        "mani": "maní",
+        "text1": "Runner, Crudo c/ piel, Blancheado, Tostado, Birfood",
+        "legumbres": "legumbres",
+        "text2": "Lentejas, Porotos, Garbanzos, Maíz pisingallo, Maíz flint, arvejas.",
+        "forrajes": "forrajes",
+        "harinas": "harinas",
+        "text3": "Maní, Legumbres, Legumbres fortificados."
+    },
+    "form": {
+        "nombre": "Nombre",
+        "telefono": "Teléfono",
+        "textarea": "¿Qué podemos hacer por tí?",
+        "btn": "Enviar"
+    },
+    "footer": {
+        "derechos": "Todos los derechos reservados"
     }
 }

@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import img1 from "../assets/ServiceItem.webp";
 import img2 from "../assets/ServiceItem2.webp";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
     const settings = {
@@ -19,21 +20,22 @@ const Services = () => {
         autoplaySpeed: 3000,
         pauseOnHover: true,
     };
+    const { t } = useTranslation();
     return (
         <Box backgroundColor="blanco" id="services">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1440 300"
-                style={{ margin: "-10px" }}
+                viewBox="0 0 1440 320"
+                style={{ marginBottom: "-10px" }}
             >
                 <path
                     fill="#002b43"
                     fillOpacity="1"
-                    d="M0,96L34.3,106.7C68.6,117,137,139,206,133.3C274.3,128,343,96,411,112C480,128,549,192,617,202.7C685.7,213,754,171,823,181.3C891.4,192,960,256,1029,240C1097.1,224,1166,128,1234,96C1302.9,64,1371,96,1406,112L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+                    d="M0,64L48,74.7C96,85,192,107,288,133.3C384,160,480,192,576,202.7C672,213,768,203,864,170.7C960,139,1056,85,1152,64C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                 ></path>
             </svg>
             <Box backgroundColor="principal" height="100%">
-                <Box maxWidth="1200px" margin="0 auto">
+                <Box maxWidth="1200px" margin="0 auto" p={4}>
                     <motion.div
                         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
                         transition={{ duration: 0.5 }}
@@ -43,9 +45,9 @@ const Services = () => {
                             color="blanco"
                             textAlign="center"
                             textDecoration="underline"
-                            py={14}
+                            py={8}
                         >
-                            Servicios
+                            {t("services.title")}
                         </Heading>
                         <Box
                             maxWidth="900px"
@@ -56,13 +58,13 @@ const Services = () => {
                             <Slider {...settings}>
                                 <ServiceItem
                                     img={img1}
-                                    titulo="Conectando negocios"
-                                    texto="Comercio internacional de productos agroalimentarios con sede en Estados unidos de América conectando al mundo. Construimos relaciones sólidas y sustentables en el tiempo con nuestra red de clientes. Hacemos posible el desarrollo de internacionalización. "
+                                    titulo={t("services.subtitle2")}
+                                    texto={t("services.text2")}
                                 />
                                 <ServiceItem
                                     img={img2}
-                                    titulo="Trader y broker"
-                                    texto=" Ofrecemos un servicio ajustado a las necesidades de nuestros clientes, tanto del exportador como del importador entendiendo su proceso productivo y de compra o venta."
+                                    titulo={t("services.subtitle1")}
+                                    texto={t("services.text1")}
                                 />
                             </Slider>
                         </Box>

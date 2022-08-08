@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Products = () => {
+    const { t } = useTranslation();
     return (
         <motion.div
             whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
@@ -17,7 +19,7 @@ const Products = () => {
                     textShadow="0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)"
                     my={20}
                 >
-                    Productos
+                    {t("products.title")}
                 </Heading>
                 <section className="cards" style={{ marginBottom: 30 }}>
                     <article className="card card--1">
@@ -31,13 +33,13 @@ const Products = () => {
                                 fontSize="lg"
                                 as="h3"
                                 className="card__category"
+                                textTransform="uppercase"
                             >
                                 {" "}
-                                Maní
+                                {t("products.mani")}
                             </Heading>
                             <Text className="card__title">
-                                Runner, Crudo c/ piel, Blancheado, Tostado,
-                                Birfood.
+                                {t("products.text1")}
                             </Text>
                         </div>
                     </article>
@@ -55,13 +57,13 @@ const Products = () => {
                                 fontSize="lg"
                                 as="h3"
                                 className="card__category"
+                                textTransform="uppercase"
                             >
                                 {" "}
-                                Legumbres
+                                {t("products.legumbres")}
                             </Heading>
                             <Text className="card__title">
-                                Lentejas, Porotos, Garbanzos, Maíz pisingallo,
-                                Maíz flint, arvejas.
+                                {t("products.text2")}
                             </Text>
                         </div>
                     </article>
@@ -78,8 +80,9 @@ const Products = () => {
                                 fontSize="lg"
                                 as="h3"
                                 className="card__category"
+                                textTransform="uppercase"
                             >
-                                Forrajes
+                                {t("products.forrajes")}
                             </Heading>
                             {/* <h3 className="card__title">Discover the sea</h3> */}
                         </div>
@@ -97,11 +100,12 @@ const Products = () => {
                                 fontSize="lg"
                                 as="h3"
                                 className="card__category"
+                                textTransform="uppercase"
                             >
-                                Harinas
+                                {t("products.harinas")}
                             </Heading>
                             <Text className="card__title">
-                                Maní, Legumbres, Legumbres fortificados.
+                                {t("products.text3")}
                             </Text>
                         </div>
                     </article>

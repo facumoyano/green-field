@@ -3,14 +3,16 @@ import { Box, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { ImArrowRight2 } from "react-icons/im";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ContactHome = () => {
+    const { t } = useTranslation();
     return (
         <Box backgroundColor="blanco">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1440 320"
-                style={{ margin: "-10px" }}
+                style={{ marginBottom: "-10px" }}
             >
                 <path
                     fill="#002b43"
@@ -27,7 +29,6 @@ const ContactHome = () => {
                 <motion.div
                     whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
                     transition={{ duration: 0.4 }}
-                    whileHover={{ scale: 1.1 }}
                 >
                     <Button
                         rightIcon={<ImArrowRight2 />}
@@ -40,8 +41,9 @@ const ContactHome = () => {
                         _hover={{
                             bgColor: "amarillo",
                         }}
+                        _active="none"
                     >
-                        <Link to="/contact">Contáctanos</Link>
+                        <Link to="/contact">{t("header.btn")}</Link>
                     </Button>
                 </motion.div>
             </Box>

@@ -5,5 +5,44 @@
         "servicios": "Services",
         "productos": "Products",
         "contacto": "Contact"
+    },
+    "header": {
+        "title": "From the world to the world.",
+        "btn": "Contact Us",
+        "subtitle": "We will communicate as soon as possible."
+    },
+    "about": {
+        "title": "About Us",
+        "text1": "We are a company that specializes in foreign trade, and we stand out for our efficacy, effectiveness, quality and service. Green Field was founded bearing in mind the need to connect businesses taking into account agro-food products and ingredients.",
+        "text2": "We work with strict controls of our clients in origin, focusing specially on quality and compliance with the specifications agreed by the parties.",
+        "text3": "We focus our efforts on building and maintaining solid relationships with our client network. ",
+        "text4": "Our experience in the international market of agro-foods and logistics allows as to be in every step of the foreign trade process, covering every aspect of exporting and importing.",
+        "text5": "We help you achieve success in your foreign trade experience."
+    },
+    "services": {
+        "title": "Services",
+        "subtitle1": "TRADER & BROKER ",
+        "text1": "We provide services customized to the needs of our clients, both importers and exporters, taking into account their productive and purchasing or selling processes.",
+        "subtitle2": "CONNECTING BUSINESSES",
+        "text2": "We provide international trade services for agro-foods based in the United States of America and connected to the world. We build solid, long-lasting relationships with our client network. We make it possible for businesses to go global. "
+    },
+    "products": {
+        "title": "Products",
+        "mani": "peanut",
+        "text1": "Runner, Raw with Skin, Blanched, Roasted, Birfood",
+        "legumbres": "legumes",
+        "text2": "Lentils, Beans, Chickpeas, Pisingallo Corn, Flint Corn, Pea.",
+        "forrajes": "fodder",
+        "harinas": "flours",
+        "text3": "Peanut flour, Legumes Flour, Fortified Legumes."
+    },
+    "form": {
+        "nombre": "Name",
+        "telefono": "Phone Number",
+        "textarea": "What can we do for you?",
+        "btn": "Send"
+    },
+    "footer": {
+        "derechos": "All rights reserved"
     }
 }

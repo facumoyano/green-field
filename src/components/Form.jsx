@@ -11,6 +11,7 @@ import {
 import { ImArrowRight2 } from "react-icons/im";
 import Error from "./Error";
 import Modal from "./Modal";
+import { useTranslation } from "react-i18next";
 
 const Form = () => {
     const [cliente, setCliente] = useState({
@@ -19,6 +20,9 @@ const Form = () => {
         telefono: "",
         mensaje: "",
     });
+
+    const { t } = useTranslation();
+
     const [error, setError] = useState(false);
 
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -61,7 +65,7 @@ const Form = () => {
                 <Input
                     bgColor="#fafafa"
                     border="none"
-                    placeholder="Nombre"
+                    placeholder={t("form.nombre")}
                     p={4}
                     name="nombre"
                     value={nombre}
@@ -79,7 +83,7 @@ const Form = () => {
                 <Input
                     bgColor="#fafafa"
                     border="none"
-                    placeholder="Teléfono"
+                    placeholder={t("form.telefono")}
                     p={4}
                     name="telefono"
                     value={telefono}
@@ -88,7 +92,7 @@ const Form = () => {
                 <Textarea
                     bgColor="#fafafa"
                     border="none"
-                    placeholder="¿Qué podemos hacer por tí?"
+                    placeholder={t("form.textarea")}
                     rows="8"
                     p={4}
                     name="mensaje"
@@ -111,7 +115,7 @@ const Form = () => {
                             bgColor: "amarilloFuerte",
                         }}
                     >
-                        Enviar
+                        {t("form.btn")}
                     </Button>
                 </Box>
                 {error && <Error />}

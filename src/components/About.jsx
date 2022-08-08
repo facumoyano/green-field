@@ -2,8 +2,10 @@ import { Heading, Box, Stack, Text, Grid } from "@chakra-ui/react";
 import React from "react";
 import video from "../assets/video.mp4";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+    const { t } = useTranslation();
     return (
         <Box my={20}>
             <Box maxWidth="1200px" margin="0 auto">
@@ -43,38 +45,22 @@ const About = () => {
                                 textShadow="0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)"
                                 pb={4}
                             >
-                                Sobre nosotros
+                                {t("about.title")}
                             </Heading>
                             <Text color="principal" fontStyle="italic">
-                                Somos una empresa especializada en comercio
-                                exterior que se destaca por su eficacia,
-                                operatividad, calidad y servicio. Green Field
-                                fue fundada con un entendimiento de la necesidad
-                                de conectar negocios a través de la comprensión
-                                de los productos e ingredientes
-                                agroalimentarios.
+                                {t("about.text1")}
                             </Text>
                             <Text color="principal" fontStyle="italic">
-                                Trabajamos con estrictos controles en origen de
-                                nuestros clientes con un importante foco en
-                                calidad y cumplimiento de las especificaciones
-                                acordadas entre las partes.
+                                {t("about.text2")}
                             </Text>
                             <Text color="principal" fontStyle="italic">
-                                Nuestro esfuerzo se focaliza en generar y
-                                mantener relaciones sólidas con nuestra red de
-                                clientes.
+                                {t("about.text3")}
                             </Text>
                             <Text color="principal" fontStyle="italic">
-                                Nuestra experiencia en el mercado internacional
-                                de agro alimentos y logística nos permite poder
-                                acompañar el proceso de comercio exterior de
-                                manera transversal en lo que respecta a
-                                exportación e importación.
+                                {t("about.text4")}
                             </Text>
                             <Text color="principal" fontStyle="italic">
-                                Hacemos que su experiencia en comercio exterior
-                                sea exitosa
+                                {t("about.text5")}
                             </Text>
                         </Stack>
                     </Grid>

@@ -4,8 +4,10 @@ import logo from "../assets/logo-blanco.webp";
 import { MdEmail } from "react-icons/md";
 import { BiMap } from "react-icons/bi";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <Box backgroundColor="negro" color="blanco">
             <Stack
@@ -38,14 +40,6 @@ const Footer = () => {
                         >
                             <BiMap /> 848 Brickell Ave, Miami, FL 33131, EE. UU.
                         </ListItem>
-                        <ListItem
-                            mt={4}
-                            display="flex"
-                            alignItems="center"
-                            gap={3}
-                        >
-                            <BsFillTelephoneFill /> +12723844278
-                        </ListItem>
                     </List>
                 </Stack>
             </Stack>
@@ -55,9 +49,7 @@ const Footer = () => {
                 pt={{ base: 4, md: 0 }}
                 px={{ base: 3, md: 0 }}
             >
-                <Text>
-                    Todos los derechos reservados © Green Field Broker LLC
-                </Text>
+                <Text>{t("footer.derechos")} © Green Field Broker LLC</Text>
             </Box>
         </Box>
     );

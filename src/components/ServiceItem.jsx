@@ -26,7 +26,7 @@ const ServiceItem = ({ img, titulo, texto }) => {
                     ></Box>
                 </Box>
                 <Box display="flex" flexDirection="column" gap={4}>
-                    <Heading as="h3" color="blanco">
+                    <Heading as="h3" color="blanco" textTransform="uppercase">
                         {titulo}
                     </Heading>
                     <Text
@@ -37,9 +37,9 @@ const ServiceItem = ({ img, titulo, texto }) => {
                     >
                         {texto}
                     </Text>
-                    <Box id="products"></Box>
                 </Box>
             </Grid>
+            <Box id="products"></Box>
         </Box>
     );
 };

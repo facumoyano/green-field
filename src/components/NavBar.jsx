@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import LogoBlanco from "../assets/logo-blanco.webp";
 import { HashLink } from "react-router-hash-link";
 import { TbLanguage } from "react-icons/tb";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import esp from "../assets/spain.png";
 import usa from "../assets/usa.png";
@@ -33,12 +34,12 @@ const NavBar = () => {
         >
             <Stack
                 flexDirection="row"
-                justifyContent={{ base: "center", md: "space-between" }}
+                justifyContent={{ base: "space-between", md: "space-between" }}
                 color="blanco"
                 maxWidth="1200px"
                 alignItems="center"
                 margin="0 auto"
-                py={5}
+                p={5}
             >
                 <Link to="/">
                     <Image
@@ -48,6 +49,66 @@ const NavBar = () => {
                         objectFit="cover"
                     />
                 </Link>
+                <Menu>
+                    <MenuButton
+                        display={{ base: "flex", md: "none" }}
+                        color="white"
+                        borderBottom="3px solid #fcc80d"
+                        _hover={{
+                            paddingBottom: "10px",
+                            color: "#fcc80d",
+                            transition: ".2s",
+                        }}
+                    >
+                        <Box
+                            display="flex"
+                            flexDirection="row"
+                            alignItems="center"
+                        >
+                            <TbLanguage
+                                style={{ color: "white", fontSize: "2rem" }}
+                            />
+                            <MdKeyboardArrowDown
+                                style={{ color: "white", fontSize: "1.5rem" }}
+                            />
+                        </Box>
+                    </MenuButton>
+                    <MenuList color="principal">
+                        <MenuItem
+                            fontWeight={600}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                i18n.changeLanguage("es");
+                            }}
+                        >
+                            <Image
+                                boxSize="1.5rem"
+                                borderRadius="full"
+                                src={esp}
+                                alt="España"
+                                mr="12px"
+                            />
+                            <span>ESP</span>
+                        </MenuItem>
+                        <MenuDivider />
+                        <MenuItem
+                            fontWeight={600}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                i18n.changeLanguage("en");
+                            }}
+                        >
+                            <Image
+                                boxSize="1.5rem"
+                                borderRadius="full"
+                                src={usa}
+                                alt="usa"
+                                mr="12px"
+                            />
+                            <span>ENG</span>
+                        </MenuItem>
+                    </MenuList>
+                </Menu>
                 <Stack
                     flexDirection="row"
                     gap={4}
@@ -136,9 +197,18 @@ const NavBar = () => {
                                 transition: ".2s",
                             }}
                         >
-                            <TbLanguage
-                                style={{ color: "white", fontSize: "20px" }}
-                            />
+                            <Box
+                                display="flex"
+                                flexDirection="row"
+                                alignItems="center"
+                            >
+                                <TbLanguage
+                                    style={{ color: "white", fontSize: "20px" }}
+                                />
+                                <MdKeyboardArrowDown
+                                    style={{ color: "white", fontSize: "20px" }}
+                                />
+                            </Box>
                         </MenuButton>
                         <MenuList color="principal">
                             <MenuItem
