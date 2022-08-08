@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { ImArrowRight2 } from "react-icons/im";
-import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 
 const ContactHome = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     const { t } = useTranslation();
+
     return (
         <Box backgroundColor="blanco">
             <svg
@@ -26,27 +33,23 @@ const ContactHome = () => {
                 height="30vh"
                 pt={{ base: 16, md: 0 }}
             >
-                <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
+                <Button
+                    rightIcon={<ImArrowRight2 />}
+                    backgroundColor="amarilloFuerte"
+                    color="blanco"
+                    fontSize="2xl"
+                    borderRadius="30px"
+                    py={6}
+                    px={10}
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    _hover={{
+                        bgColor: "amarillo",
+                    }}
+                    _active="none"
                 >
-                    <Button
-                        rightIcon={<ImArrowRight2 />}
-                        backgroundColor="amarilloFuerte"
-                        color="blanco"
-                        fontSize="2xl"
-                        borderRadius="30px"
-                        py={6}
-                        px={10}
-                        _hover={{
-                            bgColor: "amarillo",
-                        }}
-                        _active="none"
-                    >
-                        <Link to="/contact">{t("header.btn")}</Link>
-                    </Button>
-                </motion.div>
+                    <Link to="/contact">{t("header.btn")}</Link>
+                </Button>
             </Box>
         </Box>
     );

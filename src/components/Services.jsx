@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import Slider from "react-slick";
 import ServiceItem from "./ServiceItem";
@@ -6,10 +6,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img1 from "../assets/ServiceItem.webp";
 import img2 from "../assets/ServiceItem2.webp";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -20,7 +26,9 @@ const Services = () => {
         autoplaySpeed: 3000,
         pauseOnHover: true,
     };
+
     const { t } = useTranslation();
+
     return (
         <Box backgroundColor="blanco" id="services">
             <svg
@@ -36,40 +44,36 @@ const Services = () => {
             </svg>
             <Box backgroundColor="principal" height="100%">
                 <Box maxWidth="1200px" margin="0 auto" p={4}>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        transition={{ delay: 0.2, duration: 1 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
+                    <Heading
+                        as="h3"
+                        color="blanco"
+                        textAlign="center"
+                        textDecoration="underline"
+                        py={8}
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
                     >
-                        <Heading
-                            as="h3"
-                            color="blanco"
-                            textAlign="center"
-                            textDecoration="underline"
-                            py={8}
-                        >
-                            {t("services.title")}
-                        </Heading>
-                        <Box
-                            maxWidth="900px"
-                            margin="0 auto"
-                            pb={40}
-                            px={{ base: 8, md: 0 }}
-                        >
-                            <Slider {...settings}>
-                                <ServiceItem
-                                    img={img1}
-                                    titulo={t("services.subtitle2")}
-                                    texto={t("services.text2")}
-                                />
-                                <ServiceItem
-                                    img={img2}
-                                    titulo={t("services.subtitle1")}
-                                    texto={t("services.text1")}
-                                />
-                            </Slider>
-                        </Box>
-                    </motion.div>
+                        {t("services.title")}
+                    </Heading>
+                    <Box
+                        maxWidth="900px"
+                        margin="0 auto"
+                        pb={40}
+                        px={{ base: 8, md: 0 }}
+                    >
+                        <Slider {...settings}>
+                            <ServiceItem
+                                img={img1}
+                                titulo={t("services.subtitle2")}
+                                texto={t("services.text2")}
+                            />
+                            <ServiceItem
+                                img={img2}
+                                titulo={t("services.subtitle1")}
+                                texto={t("services.text1")}
+                            />
+                        </Slider>
+                    </Box>
                 </Box>
             </Box>
         </Box>
