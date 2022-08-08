@@ -7,8 +7,9 @@ const Products = () => {
     const { t } = useTranslation();
     return (
         <motion.div
-            whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, scale: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            whileInView={{ scale: 1, opacity: 1 }}
         >
             <Box maxWidth="1200px" margin="0 auto">
                 <Heading
