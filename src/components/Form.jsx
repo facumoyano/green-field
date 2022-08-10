@@ -12,6 +12,7 @@ import { ImArrowRight2 } from "react-icons/im";
 import Error from "./Error";
 import Modal from "./Modal";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
     const [cliente, setCliente] = useState({
@@ -43,6 +44,21 @@ const Form = () => {
             setError(true);
             return;
         }
+        emailjs
+            .sendForm(
+                "service_an2ltjq",
+                "template_kjk6w3d",
+                e.target,
+                "80cC6DSgCPhBJ81cW"
+            )
+            .then(
+                (result) => {
+                    console.log(result);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
         setError(false);
         setCliente({
             nombre: "",
@@ -50,7 +66,6 @@ const Form = () => {
             telefono: "",
             mensaje: "",
         });
-        console.log(cliente);
     };
 
     return (

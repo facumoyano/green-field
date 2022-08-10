@@ -44,5 +44,13 @@
     },
     "footer": {
         "derechos": "Todos los derechos reservados"
+    },
+    "error": {
+        "oblig": "Los campos son obligatorios"
+    },
+    "modal": {
+        "title": "¡Gracias por tu interés!",
+        "text": "Nos comunicaremos contigo lo más pronto posible.",
+        "btn": "Volver"
     }
 }

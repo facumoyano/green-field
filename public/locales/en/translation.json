@@ -44,5 +44,13 @@
     },
     "footer": {
         "derechos": "All rights reserved"
+    },
+    "error": {
+        "oblig": "The fields are required"
+    },
+    "modal": {
+        "title": "Thanks for your interest!",
+        "text": "we will communicate as soon as possible.",
+        "btn": "Go back"
     }
 }

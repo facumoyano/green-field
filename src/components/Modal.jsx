@@ -9,8 +9,11 @@ import {
     ModalFooter,
     Button,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 const Modal = ({ isOpen, onOpen, onClose }) => {
+    const { t } = useTranslation();
+
     return (
         <ModalChakra isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
@@ -20,13 +23,9 @@ const Modal = ({ isOpen, onOpen, onClose }) => {
                 alignItems="center"
                 width={{ base: "90%", md: "100%" }}
             >
-                <ModalHeader fontSize="2xl">
-                    ¡Gracias por tu interés!
-                </ModalHeader>
+                <ModalHeader fontSize="2xl">{t("modal.title")}</ModalHeader>
                 <ModalCloseButton />
-                <ModalBody fontSize="xl">
-                    Nos comunicaremos contigo lo más pronto posible.
-                </ModalBody>
+                <ModalBody fontSize="xl">{t("modal.text")}</ModalBody>
 
                 <ModalFooter>
                     <Button
@@ -39,7 +38,7 @@ const Modal = ({ isOpen, onOpen, onClose }) => {
                             backgroundColor: "amarilloFuerte",
                         }}
                     >
-                        Volver
+                        {t("modal.btn")}
                     </Button>
                 </ModalFooter>
             </ModalContent>
